@@ -13,6 +13,5 @@ while (charac <= 'z')
 putchar(charac);
 charac++;
 }
-putchar("\n");
 return(0);
 }
