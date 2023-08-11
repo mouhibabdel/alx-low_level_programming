@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <studio.h>
 #include <time.h>
 /* more headers goes there */
 
