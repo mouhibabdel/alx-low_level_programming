@@ -4,7 +4,7 @@
  * main - prints all possible different combinations of three digits
  * Return: ALways 0 (Success)
  */
-int m(void)
+int main(void)
 {
 int n1 = 0;
 while (n1 <= 7)
