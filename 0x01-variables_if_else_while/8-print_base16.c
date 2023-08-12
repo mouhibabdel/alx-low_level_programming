@@ -4,7 +4,7 @@
  * followed by a new line
  * Return: Always 0 (Success)
  */
-int print(void)
+int main(void)
 {
 int num = 0;
 while (num < 16)
