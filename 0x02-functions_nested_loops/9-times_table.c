@@ -15,8 +15,8 @@ _putchar(r / 10 + '0');
 _putchar(r % 10 + '0');
  if (f < 9)
 {
-putchar(',');
-putchar(' ');
+_putchar(',');
+_putchar(' ');
 }
 }
 _putchar('\n');
