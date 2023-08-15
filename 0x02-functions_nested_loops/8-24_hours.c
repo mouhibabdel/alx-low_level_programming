@@ -10,12 +10,12 @@ for (n = 0; n < 24; n++)
 {
 for (j = 0; j < 60; j++)
 {
-putchar(n / 10 + '0');
-putchar(n % 10 + '0');
-putchar(':');
-putchar(j / 10 + '0');
-putchar(j % 10 + '0');
-putchar('\n');
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
+_putchar(':');
+_putchar(j / 10 + '0');
+_putchar(j % 10 + '0');
+_putchar('\n');
 }
 }
 return (0);
