@@ -7,16 +7,12 @@
  */
 int _abs(int n)
 {
-if (n > 0)
+if (n >= 0)
 {
 _putchar(n + '0');
 }
-else if (n < 0)
-{
-_putchar(-n + '0');
-}
 else
 {
-_putchar('0');
+_putchar(-n + '0');
 }
 }
