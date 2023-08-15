@@ -16,5 +16,6 @@ else
 {
 d = -n % 10;
 }
+_putchar(d + '0');
 return (d);
 }
