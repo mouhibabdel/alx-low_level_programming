@@ -13,7 +13,7 @@ for (f = 0; f <= 9; f++)
 r = t * f;
 if (r < 10)
 {
-putchar(r + '0');
+_putchar(r + '0');
 }
 else
 {
