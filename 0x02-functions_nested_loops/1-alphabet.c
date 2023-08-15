@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <main.h>
 /**
  * print_alphabet - print all alphabet in lowercase
  */
@@ -8,8 +7,8 @@ int main()
 char chr;
 for(chr = 'a'; chr <= 'z'; chr++)
 {
-_putchar(chr);
+putchar(chr);
 }
-_putchar('\n');
+putchar('\n');
 return (0);
 }
