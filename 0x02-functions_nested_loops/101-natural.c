@@ -17,5 +17,5 @@ s += n;
 }
 }
 printf("%d\n", s);
-return 0;
+ return (0);
 }
