@@ -23,7 +23,7 @@ printf("%d\n", m);
 }
 }
 }
-else if ( n >= 98)
+else if (n >= 98)
 {
 for (y = n; y >= 98; y--)
 if (y != 98)
