@@ -1,4 +1,3 @@
-rrie@ubuntu:/debugging$ cat main.c
 #include "main.h"
 
 /**
