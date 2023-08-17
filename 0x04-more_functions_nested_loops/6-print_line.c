@@ -4,14 +4,14 @@
  */
 void print_line(int n)
 {
-int n1;
 if (n <= 0)
 {
 _putchar('\n');
 }
 else
 {
-for (n1 = 1; n1 < n; n1++)
+int n1;
+for (n1 = 1; n1 <= n; n1++)
 {
 _putchar('_');
 }
