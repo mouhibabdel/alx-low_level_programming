@@ -9,9 +9,12 @@ if (n <= 0)
 {
 _putchar('\n');
 }
+else
+{
 for (n1 = 1; n1 < n; n1++)
 {
 _putchar('_');
 }
 _putchar('\n');
+}
 }
