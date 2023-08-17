@@ -9,7 +9,7 @@ if (n <= 0)
 {
 _putchar('\n');
 }
-for (n1 = 0; n1 < n; n1++)
+for (n1 = 1; n1 < n; n1++)
 {
 _putchar('_');
 }
