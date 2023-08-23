@@ -15,10 +15,11 @@ length++;
 str++;
 }
 str -= length;
-n = (length ) / 2;
+n = length / 2;
 while (str[n] != '\0')
 {
-putchar(str[n]);
+_putchar(str[n]);
 n++;
 }
+_putchar('\n');
 }
