@@ -17,6 +17,7 @@ i++;
 for (u = 0; src[u] != '\0'; u++)
 {
 dest[i] = src[u];
+u++;
 }
 dest[i] = '\0';
 return (dest);
