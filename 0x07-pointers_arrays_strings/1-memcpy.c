@@ -7,13 +7,14 @@
  *
  *Return: copied memory with n bytes changed
  */
-
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-int i;
-for (i = 0; i < n; i++)
+int r = 0;
+int i = n;
+for (; r < i; r++)
 {
-s[i] = b;
+dest[r] = src[r];
+n--;
 }
-return (s);
+return (dest);
 }
