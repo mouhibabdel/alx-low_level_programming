@@ -7,11 +7,12 @@
  */
 int recursive_sqrt(int n, int low, int high)
 {
+int mid;
 if (low > high)
 {
 return (-1);
 }
-int mid = (low + high) / 2;
+mid = (low + high) / 2;
 if (mid * mid == n)
 {
 return (mid);
