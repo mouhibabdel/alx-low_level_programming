@@ -13,11 +13,11 @@ if (low > high)
 return (-1);
 }
 mid = (low + high) / 2;
-if (mid * mid == n)
+if (mid *mid == n)
 {
 return (mid);
 }
-if (mid * mid > n)
+if (mid *mid > n)
 {
 return (recursive_sqrt(n, low, mid - 1));
 }
@@ -27,7 +27,7 @@ int _sqrt_recursion(int n)
 {
 if (n < 0)
 {
-return -1;
+return (-1);
 }
 if (n == 0 || n == 1)
 {
