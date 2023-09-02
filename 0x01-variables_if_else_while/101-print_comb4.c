@@ -1,4 +1,6 @@
-#include <stdio.h>
+
+
+0;276;0c#include <stdio.h>
 #include <stdio.h>
 /**
  * main - prints all possible different combinations of three digits
