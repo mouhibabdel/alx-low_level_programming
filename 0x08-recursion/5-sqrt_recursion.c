@@ -1,4 +1,5 @@
 #include "main.h"
+int sqr(int u, int h)
 /**
  * actual_sqrt_recursion - calculates the square root recursively
  * @n: the number for which the square root is calculated
@@ -17,8 +18,6 @@ else
 return (sqr(n, 0));
 }
 }
-int sqr(int u, int h);
-
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: number to calculate the square root of
