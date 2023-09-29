@@ -1,11 +1,10 @@
 #include "main.h"
 int sqr(int u, int h);
 /**
- * actual_sqrt_recursion - calculates the square root recursively
- * @n: the number for which the square root is calculated
- * @i: the current guess for the square root
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number to calculate the square root of
  *
- * Return: the calculated square root
+ * Return: the resulting square root
  */
 int _sqrt_recursion(int n)
 {
@@ -18,11 +17,12 @@ else
 return (sqr(n, 0));
 }
 }
-/**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: number to calculate the square root of
+/** 
+ *sqrt - calculates the square root recursively
+ * @u: the number for which the square root is calculated
+ * @h: the current guess for the square root
  *
- * Return: the resulting square root
+ * Return: the calculated square root
  */
 int sqr(int u, int h)
 {
