@@ -17,8 +17,8 @@ else
 return (sqr(n, 0));
 }
 }
-/** 
- *sqrt - calculates the square root recursively
+/**
+ *sqr - calculates the square root recursively
  * @u: the number for which the square root is calculated
  * @h: the current guess for the square root
  *
