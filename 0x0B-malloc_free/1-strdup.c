@@ -10,16 +10,25 @@
  */
 char *_strdup(char *str)
 {
+char *duplicate;
+int u, i = 0;
 if (str == NULL)
 {
 return (NULL);
 }
-size_t length = strlen(str);
-char *duplicate = (char *)malloc(length + 1);
+u = 0;
+while (str[u] != '\0')
+{
+u++;
+}
+duplicate = malloc(sizeof(char) * (u + 1));
 if (duplicate == NULL)
 {
 return (NULL);
 }
-strcpy(duplicate, str);
+for (i = 0; str[i]; i++)
+{
+duplicate[i] = str[i];
+}
 return (duplicate);
 }
