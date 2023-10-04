@@ -8,22 +8,20 @@
  */
 char *create_array(unsigned int size, char c)
 {
+int u;
+char *array;
 if(size == 0)
 {
 return (NULL);
 }
-if (size > 0)
-{
-char *array = (char *)malloc(size * sizeof(char));
+array = (char *)malloc(size * sizeof(char));
 if(array == NULL)
 {
 return (NULL);
 }
-int u;
 for (u = 0; u < size; u++)
 {
 array[u] = c;
 }
 return (array);
-}
 }
