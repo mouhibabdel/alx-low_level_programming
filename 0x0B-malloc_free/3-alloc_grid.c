@@ -33,7 +33,8 @@ free(grid[y]);
 free(grid);
 return (NULL);
 }
-for (y = 0; y < width; y++){
+for (y = 0; y < width; y++)
+{
 grid[x][y] = 0;
 }
 }
