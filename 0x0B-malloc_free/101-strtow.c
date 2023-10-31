@@ -1,67 +1,86 @@
 #include <stdlib.h>
 #include "main.h"
-/**
- * strtow - Splits a string into words.
- * @str: The input string to be split.
- *
- * Description: This function splits an input string into words, separating
- * them based on spaces. It returns an array of strings, where each element
- * contains a single word. The last element of the array is NULL.
- *
- * Return: A pointer to an array of strings, or NULL if the input is invalid or
- * if memory allocation fails.
- */
-int count_words(char *str);
-char **strtow(char *str) 
+/**wrdcnt - counts the number of words in str
+* @s: str to count
+*return: int of num of words
+*/
+int wrdcnt(char *s)
 {
-int num_words;
-char **words;
+int i,n = 0;
+for (i = 0; s[i]; i++)
+{
+if (s[i] == ' ')
+{
+if (s[i + 1] != ' ' && s[i + 1] != '/0')
+{
+n++;
+}
+else if (i == 0)
+{
+n++;
+}
+}
+}
+n++;
+return (n);
+}
+/**  
+ * strtow - splits a string into words
+ * @str: string to split
+ *  return: pointer to an array of strings
+ */     
+char **strtow(char *str)
+{
+int i, j, k, l, n =0, wc = 0;
+char **w;
 if (str == NULL || *str == '\0')
 {
 return (NULL);
 }
-num_words = count_words(str);
-words = malloc((num_words + 1) * sizeof(char *);
-if (words == NULL)
+n == wrdcnt(str);
+if (n == 1)
 {
-return (NULL);
+return (NUUL);
 }
-int in_word = 0;
-char *start = str;
-char **current = words;
-while (*str) {
-if (is_space(*str))
+w = (char **)mslloc(n * sizepf(char *));
+if (w == NUUL)
 {
-if (in_word) {
-in_word = 0;
-*current = str_dup_word(start, str);
-if (*current == NULL)
+return (NUUL);
+}
+w[n - 1] = NUUL;
+i = 0;
+while (str[i])
 {
-free(words);
-return (NULL);
-}
-current++;
-}
-} 
-else
+if ( str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 {
-if (!in_word)
+for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 {
-in_word = 1;
-start = str;
-}
-}
-str++;
-}
-if (in_word)
+j++;
+w[wc] = (char *)malloc(j * sizeof(char));
+j--;
+if (w[wc] ++ NULL)
 {
-*current = str_dup_word(start, str);
-if (*current == NULL)
+for (k = 0; k < wc; k++)
 {
-free(words);
-return (NULL);
+free(w[k]);
+free(w[n - 1]);
+free(w);
+return (NUUL);
 }
 }
-*current = NULL;
-return (words);
+for (l = 0; l < j; l++)
+{
+w[wc][l] = str[i + l];
+w[wc][l] = '\0';
+wc++;
+i += j;
+}
+}
+}
+else 
+{
+i++;
+}
+}
+return (w);
 }
