@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "main"
+#include "main.h"
 /**
  * argstostr - Concatenates program arguments into a single string with newlines.
  * @ac: Number of program arguments.
