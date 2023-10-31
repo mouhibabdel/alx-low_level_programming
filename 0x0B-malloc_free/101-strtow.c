@@ -11,63 +11,24 @@
  * Return: A pointer to an array of strings, or NULL if the input is invalid or
  * if memory allocation fails.
  */
-int is_space(char c) 
-{
-return (c == ' ' || c == '\t' || c == '\n');
-}
-int count_words(char *str)
-{
-int count = 0;
-int in_word = 0;
-while (*str) 
-{
-if (is_space(*str))
-{
-if (in_word) 
-{
-in_word = 0;
-}
-}
-else
-{
-if (!in_word)
-{
-in_word = 1;
-count++;
-}
-}
-str++;
-}
-return (count);
-}
-char *str_dup_word(char *start, char *end) 
-{
-int length = end - start;
-char *word = malloc(length + 1);
-if (word) 
-{
-int i;
-for (i = 0; i < length; i++) 
-{
-word[i] = start[i];
-}
-word[length] = '\0';
-}
-return (word);
-}
 char **strtow(char *str) 
 {
-if (str == NULL || *str == '\0'){
-return (NULL);
-}
-int num_words = count_words(str);
-char **words = malloc((num_words + 1) * sizeof(char *));
-if (words == NULL){
-return (NULL);
-}
+int num_words;
+char **words;
 int in_word = 0;
 char *start = str;
-char **current = words;
+char **current;
+if (str == NULL || *str == '\0')
+{
+return (NULL);
+}
+num_words = count_words(str);
+words = malloc((num_words + 1) * sizeof(char *);
+if (words == NULL)
+{
+return (NULL);
+}
+current = words;
 while (*str)
 {
 if (is_space(*str)) 
