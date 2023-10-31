@@ -11,13 +11,11 @@
  * Return: A pointer to an array of strings, or NULL if the input is invalid or
  * if memory allocation fails.
  */
+int count_words(char *str);
 char **strtow(char *str) 
 {
 int num_words;
 char **words;
-int in_word = 0;
-char *start = str;
-char **current;
 if (str == NULL || *str == '\0')
 {
 return (NULL);
@@ -28,13 +26,13 @@ if (words == NULL)
 {
 return (NULL);
 }
-current = words;
-while (*str)
+int in_word = 0;
+char *start = str;
+char **current = words;
+while (*str) {
+if (is_space(*str))
 {
-if (is_space(*str)) 
-{
-if (in_word)
-{
+if (in_word) {
 in_word = 0;
 *current = str_dup_word(start, str);
 if (*current == NULL)
@@ -44,7 +42,7 @@ return (NULL);
 }
 current++;
 }
-}
+} 
 else
 {
 if (!in_word)
