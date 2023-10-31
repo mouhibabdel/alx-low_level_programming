@@ -5,9 +5,9 @@
  * @ac: Number of program arguments.
  * @av: Array of argument strings.
  *
- * Description: Concatenates program arguments with newlines, returning a string.
+ * Description: Concatenates program arguments with newlines.
  *
- * Return: Pointer to the concatenated string, or NULL on memory allocation failure.
+ * Return: Pointer to concatenated string /  NULL on memory allocation failure.
  */
 char *argstostr(int ac, char **av)
 {
