@@ -30,7 +30,8 @@ if (concatenated == NULL)
 {
 return (NULL);
 }
- for (i = 0; i < ac; i++)
+k = 0;
+for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++)
 {
@@ -38,6 +39,7 @@ concatenated[k] = av[i][j];
 k++;
 }
 concatenated[k] = '\n';
+k++;
 }
 concatenated[k] = '\0';
 return (concatenated);
