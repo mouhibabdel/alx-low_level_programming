@@ -25,28 +25,32 @@ dst[i] = '\0';
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *new_dog_ptr;
-int name_len, owner_len;
-for (name_len = 0; name[name_len]; name_len++)
+dog_t *d;
+int a, b;
+for (a = 0; name[a]; a++)
 ;
-for (owner_len = 0; owner[owner_len]; owner_len++)
+for (b = 0; owner[b]; b++)
 ;
-new_dog_ptr = malloc(sizeof(dog_t);
-if (new_dog_ptr == NULL)
+d = malloc(sizeof(dog_t));
+if (!d)
 {
 return (NULL);
 }
-new_dog_ptr->name = malloc(name_len + 1);
-new_dog_ptr->owner = malloc(owner_len + 1);
-if (new_dog_ptr->name == NULL || new_dog_ptr->owner == NULL)
+d->name = malloc(a + 1);
+if (!d->name)
 {
-free(new_dog_ptr->name);
-free(new_dog_ptr->owner);
-free(new_dog_ptr);
+free(d);
 return (NULL);
 }
-_strcopy(new_dog_ptr->name, name);
-_strcopy(new_dog_ptr->owner, owner);
-new_dog_ptr->age = age;
-return (new_dog_ptr);
+d->owner = malloc(b + 1);
+if (!d->owner)
+{
+free(d->name);
+free(d);
+return (NULL);
+}
+_strcopy(d->name, name);
+_strcopy(d->owner, owner);
+d->age = age;
+return (d);
 }
