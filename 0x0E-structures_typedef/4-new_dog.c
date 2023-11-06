@@ -6,17 +6,15 @@
  * @dst: Destination string.
  * @src: Source string.
  */
-void _strcopy(char *dst, const char *src)
+void _strcopy(char *dst, char *src)
 {
-while (*src)
+int i;
+for (i = 0; src[i]; i++)
 {
-*dst = *src;
-dst++;
-src++;
+dst[i] = src[i];
 }
-*dst = '\0';
+dst[i] = '\0';
 }
-
 /**
  * new_dog - Create a new dog with the given attributes.
  * @name: Name of the dog.
