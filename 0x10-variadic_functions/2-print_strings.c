@@ -5,7 +5,6 @@
  *@n: number of strings be printed
  *Return: void
  */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list potr;
@@ -19,7 +18,7 @@ if (strl)
 printf("%s", strl);
 else
 printf("(nil)");
-if (separator && k < n - 1)
+if (separator && j < n - 1)
 {
 printf("%s", separator);
 }
