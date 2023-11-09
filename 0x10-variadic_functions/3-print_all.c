@@ -7,7 +7,7 @@
 void print_all(const char * const format, ...)
 {
 va_list list;
-int v = 0; 
+int v = 0;
 char *j;
 char *seppa = ", ";
 va_start(list, format);
