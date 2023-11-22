@@ -10,23 +10,21 @@
  */
 listint_t *find_listint_loop_fl(listint_t *head)
 {
-listint_t *potr, *ed;
+listint_t *ptr, *end;
 if (head == NULL)
 {
 return (NULL);
 }
-for (ed = head->next; ed != NULL; ed = ed->next)
+for (end = head->next; end != NULL; end = end->next)
 {
-if (ed == ed->next)
+if (end == end->next)
 {
-return (ed);
+return (end);
 }
-for (potr = head; potr != ed; potr = potr->next)
+for (ptr = head; ptr != end; ptr = ptr->next)
+if (ptr == end->next)
 {
-if (potr == ed->next)
-{
-return (ed->next);
-}
+return (end->next);
 }
 }
 return (NULL);
@@ -41,32 +39,32 @@ return (NULL);
  */
 size_t free_listint_safe(listint_t **h)
 {
-listint_t *nxt, *loope;
-size_t lengh;
-int lop = 1;
+listint_t *next, *loopnode;
+size_t len;
+int loop = 1;
 if (h == NULL || *h == NULL)
 {
 return (0);
 }
-loope = find_listint_loop_fl(*h);
-for (lengh = 0; (*h != loope || lop) && *h != NULL; *h = nxt)
+loopnode = find_listint_loop_fl(*h);
+for (len = 0; (*h != loopnode || loop) && *h != NULL; *h = next)
 {
-lengh++;
-nxt = (*h)->nxt;
-if (*h == loope && lop)
+len++;
+next = (*h)->next;
+if (*h == loopnode && loop)
 {
-if (loope == loope->nxt)
+if (loopnode == loopnode->next)
 {
 free(*h);
 break;
 }
-lengh++;
-nxt = nxt->nxt;
-free((*h)->nxt);
-lop = 0;
+len++;
+next = next->next;
+free((*h)->next);
+loop = 0;
 }
 free(*h);
 }
 *h = NULL;
-return (lengh);
+return (len);
 }
