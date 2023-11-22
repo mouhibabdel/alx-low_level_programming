@@ -8,7 +8,7 @@
  */
 listint_t *reverse_help(listint_t *first, listint_t *second)
 {
-listint_t *pointr, *prv = NULL;//prev //ptr
+listint_t *pointr, *prv = NULL;
 pointr = first;
 while (pointr->next != second)
 {
