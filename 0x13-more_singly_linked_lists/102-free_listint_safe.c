@@ -41,7 +41,7 @@ return (NULL);
  */
 size_t free_listint_safe(listint_t **h)
 {
-listint_t *nxt, *loope;//next //loopnode
+listint_t *nxt, *loope;
 size_t lengh;
 int lop = 1;
 if (h == NULL || *h == NULL)
