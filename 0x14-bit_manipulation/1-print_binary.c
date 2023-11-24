@@ -23,7 +23,7 @@ return;
 _fg = 0;
 while (_sizz >= 0)
 {
-_b = (n >> _sizz) & 1;
+_b = (n >> _sizz) &1;
 if (_fg == 1)
 {
 putchar(_b + '0');
